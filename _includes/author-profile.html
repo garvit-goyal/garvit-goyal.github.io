@@ -26,14 +26,14 @@
     <ul class="author__urls">
       {% if author.location %}
         <li class="author__desktop">
-          <span class="profile-icon" aria-hidden="true"><i class="fas fa-location-dot"></i></span>
+          <span class="profile-icon" aria-hidden="true"><i class="fas fa-fw fa-location-dot"></i></span>
           <span>{{ author.location }}</span>
         </li>
       {% endif %}
       {% if author.email %}
         <li>
           <a href="mailto:{{ author.email }}">
-            <span class="profile-icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+            <span class="profile-icon" aria-hidden="true"><i class="fas fa-fw fa-envelope"></i></span>
             <span>Email</span>
           </a>
         </li>
@@ -41,7 +41,7 @@
       {% if author.linkedin %}
         <li>
           <a href="https://www.linkedin.com/in/{{ author.linkedin }}">
-            <span class="profile-icon" aria-hidden="true"><i class="fab fa-linkedin"></i></span>
+            <span class="profile-icon" aria-hidden="true"><i class="fab fa-fw fa-linkedin"></i></span>
             <span>LinkedIn</span>
           </a>
         </li>
@@ -49,7 +49,7 @@
       {% if author.cv %}
         <li>
           <a href="{{ author.cv | prepend: base_path }}">
-            <span class="profile-icon" aria-hidden="true"><i class="fas fa-file-pdf"></i></span>
+            <span class="profile-icon" aria-hidden="true"><i class="fas fa-fw fa-file-pdf"></i></span>
             <span>CV</span>
           </a>
         </li>
@@ -65,7 +65,7 @@
       {% if author.openreview %}
         <li>
           <a href="{{ author.openreview }}">
-            <span class="profile-icon" aria-hidden="true"><i class="fas fa-pen-to-square"></i></span>
+            <span class="profile-icon" aria-hidden="true"><i class="fas fa-fw fa-pen-to-square"></i></span>
             <span>OpenReview</span>
           </a>
         </li>
@@ -81,7 +81,7 @@
       {% if author.github %}
         <li>
           <a href="https://github.com/{{ author.github }}">
-            <span class="profile-icon" aria-hidden="true"><i class="fab fa-github"></i></span>
+            <span class="profile-icon" aria-hidden="true"><i class="fab fa-fw fa-github"></i></span>
             <span>GitHub</span>
           </a>
         </li>

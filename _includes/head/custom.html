@@ -5,9 +5,13 @@
 <link rel="icon" href="{{ base_path }}/images/favicon.svg" type="image/svg+xml">
 <script>
   (function () {
-    var saved = localStorage.getItem("garvit-color-theme");
+    var saved = localStorage.getItem("theme");
     var theme = saved === "light" || saved === "dark" ? saved : "dark";
-    document.documentElement.setAttribute("data-theme", theme);
+    if (theme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+    }
   })();
 </script>
 {% if jekyll.environment == "production" and site.analytics.google.tracking_id %}
