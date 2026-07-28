@@ -30,7 +30,7 @@ My research interests lie in reliable and trustworthy machine learning, meta-lea
 
 In the past, I have explored non-Euclidean sentence representations, graph neural networks for imbalanced classification, personalized federated learning, agent-based simulation, long-horizon traffic-flow prediction, visual positioning, and vehicle-behavior modeling.
 
-For more details, please see the [Projects page](/projects/).
+For more details, please see the [Projects](/projects/) page.
 
 ## CV
 
