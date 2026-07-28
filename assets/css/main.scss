@@ -1067,3 +1067,46 @@ html[data-theme="light"] .site-theme-toggle:focus-visible {
     padding-top: 4px !important;
   }
 }
+
+
+/* Align the desktop navigation with the main text column. */
+@media screen and (min-width: 1024px) {
+  .masthead__inner-wrap {
+    display: grid !important;
+    grid-template-columns: repeat(24, minmax(0, 1fr));
+    max-width: $x-large !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .site-nav {
+    grid-column: 6 / 21;
+    justify-self: end !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Use a cleaner, stroke-based crescent in light mode. */
+.site-theme-toggle__moon {
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.8 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+
+html[data-theme="light"] .site-theme-toggle {
+  width: 1.9rem !important;
+  height: 1.9rem !important;
+  border: 1px solid var(--site-border) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="light"] .site-theme-toggle:hover,
+html[data-theme="light"] .site-theme-toggle:focus-visible {
+  border-color: var(--site-accent) !important;
+  color: var(--site-accent-hover) !important;
+  background: var(--site-surface-raised) !important;
+  box-shadow: none !important;
+}
