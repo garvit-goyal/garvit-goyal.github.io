@@ -2,6 +2,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="icon" href="{{ base_path }}/images/favicon.svg" type="image/svg+xml">
 <script>
   (function () {
     var saved = localStorage.getItem("garvit-color-theme");
@@ -9,3 +10,12 @@
     document.documentElement.setAttribute("data-theme", theme);
   })();
 </script>
+{% if jekyll.environment == "production" and site.analytics.google.tracking_id %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google.tracking_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.analytics.google.tracking_id }}');
+</script>
+{% endif %}

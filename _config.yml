@@ -2,11 +2,12 @@ locale: "en-US"
 title: "Garvit Goyal"
 title_separator: "-"
 name: &name "Garvit Goyal"
-description: &description "Machine Learning Researcher"
+description: &description "Machine learning researcher working on reliable ML, AutoML, and representation learning."
 url: "https://garvit-goyal.github.io"
 baseurl: ""
 repository: "garvit-goyal/garvit-goyal.github.io"
 remote_theme: "academicpages/academicpages.github.io@master"
+og_image: "/images/profile.jpg"
 
 author:
   avatar: "profile.jpg"
@@ -17,7 +18,7 @@ author:
   employer:
   uri:
   email: "garvitgoyal98@gmail.com"
-  cv: "/cv/"
+  cv: "/files/Garvit_Goyal_CV.pdf"
   arxiv:
   googlescholar:
   orcid:
@@ -39,7 +40,7 @@ atom_feed:
   hide: true
 
 analytics:
-  provider: "google-analytics-4"
+  provider: false
   google:
     tracking_id: "G-8EX5F1SVZH"
 

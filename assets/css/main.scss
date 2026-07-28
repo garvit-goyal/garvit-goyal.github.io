@@ -536,3 +536,84 @@ blockquote {
 .masthead__menu-item--lg a {
   font-weight: 700 !important;
 }
+
+
+/* Final layout overrides for the current AcademicPages theme. */
+body {
+  padding-top: 64px !important;
+}
+
+.masthead {
+  height: 64px !important;
+  min-height: 64px !important;
+}
+
+.masthead__inner-wrap {
+  display: flex !important;
+  align-items: center !important;
+  height: 64px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.masthead__menu {
+  width: 100% !important;
+}
+
+.greedy-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  background: transparent !important;
+}
+
+.greedy-nav .visible-links {
+  display: flex !important;
+  align-items: center !important;
+  margin-left: auto !important;
+}
+
+.masthead__menu-item,
+.masthead__menu-item--lg,
+.masthead__theme-item {
+  background: transparent !important;
+}
+
+.greedy-nav a {
+  margin: 0 0.85rem !important;
+  padding: 0.75rem 0 !important;
+}
+
+.greedy-nav .visible-links li:last-child a {
+  margin-right: 0 !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar,
+  .sidebar.sticky {
+    top: calc(64px + 2rem) !important;
+    max-height: calc(100vh - 64px - 3rem) !important;
+  }
+}
+
+.page__footer {
+  padding: 1.25rem 1rem !important;
+}
+
+.page__footer-copyright {
+  margin: 0 auto !important;
+  text-align: center !important;
+  font-size: 0.75rem !important;
+  color: var(--site-muted) !important;
+}
+
+.page__footer-copyright a {
+  color: var(--site-muted) !important;
+}
+
+.page__footer-copyright a:hover,
+.page__footer-copyright a:focus {
+  color: var(--site-accent-hover) !important;
+}
