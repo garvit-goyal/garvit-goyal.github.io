@@ -1,0 +1,23 @@
+<script>
+(function () {
+  var root = document.documentElement;
+  var button = document.getElementById("site-theme-toggle");
+  if (!button) return;
+
+  function paint() {
+    var dark = root.getAttribute("data-theme") !== "light";
+    var label = dark ? "Switch to light theme" : "Switch to dark theme";
+    button.setAttribute("aria-label", label);
+    button.setAttribute("title", label);
+  }
+
+  button.addEventListener("click", function () {
+    var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+    root.setAttribute("data-theme", next);
+    localStorage.setItem("garvit-color-theme", next);
+    paint();
+  });
+
+  paint();
+})();
+</script>

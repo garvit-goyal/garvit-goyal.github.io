@@ -5,7 +5,6 @@
 {% else %}
   {% assign author = site.author %}
 {% endif %}
-
 <div class="author-profile" itemscope itemtype="https://schema.org/Person">
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
@@ -14,26 +13,24 @@
       <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" alt="{{ author.name }}">
     {% endif %}
   </div>
-
   <div class="author__content">
     <h3 class="author__name" itemprop="name">{{ author.name }}</h3>
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
-
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">Links</button>
     <ul class="author__urls">
       {% if author.location %}
         <li class="author__desktop">
-          <span class="profile-icon" aria-hidden="true"><i class="fas fa-fw fa-location-dot"></i></span>
+          <span class="profile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-12A7 7 0 1 0 5 9c0 5.9 7 12 7 12Zm0-9.4A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.2Z"/></svg></span>
           <span>{{ author.location }}</span>
         </li>
       {% endif %}
       {% if author.email %}
         <li>
           <a href="mailto:{{ author.email }}">
-            <span class="profile-icon" aria-hidden="true"><i class="fas fa-fw fa-envelope"></i></span>
+            <span class="profile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3V5Zm2 2v.4l7 5.2 7-5.2V7H5Zm14 10V9.9l-7 5.2-7-5.2V17h14Z"/></svg></span>
             <span>Email</span>
           </a>
         </li>
@@ -41,7 +38,7 @@
       {% if author.linkedin %}
         <li>
           <a href="https://www.linkedin.com/in/{{ author.linkedin }}">
-            <span class="profile-icon" aria-hidden="true"><i class="fab fa-fw fa-linkedin"></i></span>
+            <span class="profile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.2 3.8A2.2 2.2 0 1 1 5.2 8a2.2 2.2 0 0 1 0-4.3ZM3.4 9.5H7V21H3.4V9.5Zm5.8 0h3.5v1.6h.1c.5-.9 1.7-2 3.5-2 3.8 0 4.5 2.5 4.5 5.7V21h-3.7v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9.2V9.5Z"/></svg></span>
             <span>LinkedIn</span>
           </a>
         </li>
@@ -49,39 +46,24 @@
       {% if author.cv %}
         <li>
           <a href="{{ author.cv | prepend: base_path }}">
-            <span class="profile-icon" aria-hidden="true"><i class="fas fa-fw fa-file-pdf"></i></span>
+            <span class="profile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 2h8l5 5v15H6V2Zm8 2.5V8h3.5L14 4.5ZM8.5 12h8v-1.5h-8V12Zm0 3.5h8V14h-8v1.5Zm0 3.5h5.5v-1.5H8.5V19Z"/></svg></span>
             <span>CV</span>
           </a>
         </li>
       {% endif %}
       {% if author.googlescholar %}
-        <li>
-          <a href="{{ author.googlescholar }}">
-            <span class="profile-icon" aria-hidden="true"><i class="ai ai-google-scholar"></i></span>
-            <span>Google Scholar</span>
-          </a>
-        </li>
+        <li><a href="{{ author.googlescholar }}"><span class="profile-icon" aria-hidden="true">G</span><span>Google Scholar</span></a></li>
       {% endif %}
       {% if author.openreview %}
-        <li>
-          <a href="{{ author.openreview }}">
-            <span class="profile-icon" aria-hidden="true"><i class="fas fa-fw fa-pen-to-square"></i></span>
-            <span>OpenReview</span>
-          </a>
-        </li>
+        <li><a href="{{ author.openreview }}"><span class="profile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 17.3V21h3.7L18.6 10.1l-3.7-3.7L4 17.3Zm17.7-10a1 1 0 0 0 0-1.4l-2.6-2.6a1 1 0 0 0-1.4 0l-2 2 3.7 3.7 2.3-1.7Z"/></svg></span><span>OpenReview</span></a></li>
       {% endif %}
       {% if author.orcid %}
-        <li>
-          <a href="{{ author.orcid }}">
-            <span class="profile-icon" aria-hidden="true"><i class="ai ai-orcid"></i></span>
-            <span>ORCID</span>
-          </a>
-        </li>
+        <li><a href="{{ author.orcid }}"><span class="profile-icon" aria-hidden="true">iD</span><span>ORCID</span></a></li>
       {% endif %}
       {% if author.github %}
         <li>
           <a href="https://github.com/{{ author.github }}">
-            <span class="profile-icon" aria-hidden="true"><i class="fab fa-fw fa-github"></i></span>
+            <span class="profile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 .7a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C16.6 4.6 17.6 5 17.6 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg></span>
             <span>GitHub</span>
           </a>
         </li>
