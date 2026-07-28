@@ -1,0 +1,98 @@
+locale: "en-US"
+title: "Garvit Goyal"
+title_separator: "-"
+name: &name "Garvit Goyal"
+description: &description "Machine Learning Researcher"
+url: "https://garvit-goyal.github.io"
+baseurl: ""
+repository: "garvit-goyal/garvit-goyal.github.io"
+remote_theme: "academicpages/academicpages.github.io@master"
+
+author:
+  avatar: "profile.jpg"
+  name: "Garvit Goyal"
+  pronouns:
+  bio: "Machine Learning Researcher"
+  location: "New Delhi, India"
+  employer:
+  uri:
+  email: "garvitgoyal98@gmail.com"
+  cv: "/cv/"
+  arxiv:
+  googlescholar:
+  orcid:
+  semantic:
+  openreview:
+  researchgate:
+  github: "garvit-goyal"
+  linkedin: "garvit25"
+  twitter:
+  bluesky:
+
+breadcrumbs: false
+future: true
+read_more: "disabled"
+talkmap_link: false
+comments:
+  provider:
+atom_feed:
+  hide: true
+
+analytics:
+  provider: "google-analytics-4"
+  google:
+    tracking_id: "G-8EX5F1SVZH"
+
+include:
+  - _pages
+  - files
+
+exclude:
+  - README.md
+  - NOTICE
+  - Gemfile
+  - vendor
+  - node_modules
+
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+permalink: /:categories/:title/
+timezone: Asia/Kolkata
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-feed
+
+whitelist:
+  - jekyll-remote-theme
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-feed
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
