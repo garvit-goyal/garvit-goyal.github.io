@@ -32,6 +32,8 @@ In the past, I have explored non-Euclidean sentence representations, graph neura
 
 For more details, please see the [Projects](/projects/) page.
 
+I am always happy to chat about experiences in industry and academia, research ideas and potential collaborations, or anything else. Feel free to [reach out](mailto:{{ site.author.email }}).
+
 ## CV
 
 My full academic CV is available [here](/files/Garvit_Goyal_CV.pdf).
