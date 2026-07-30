@@ -1,20 +1,75 @@
 <script>
 (function () {
   var root = document.documentElement;
-  var button = document.getElementById("theme-toggle");
-  if (!button) return;
+  var button = document.getElementById("site-theme-toggle");
+  var state = window.GarvitTheme || {};
+  var PRIMARY_KEY = state.primaryKey || "garvit-theme-v2";
+  var LEGACY_KEY = state.legacyKey || "garvit-color-theme";
+  var UPSTREAM_KEY = state.upstreamKey || "theme";
 
-  function updateLabel() {
-    var dark = root.getAttribute("data-theme") === "dark";
-    var label = dark ? "Switch to light theme" : "Switch to dark theme";
+  function safeGet(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function safeSet(key, value) {
+    try {
+      localStorage.setItem(key, value);
+    } catch (error) {
+      /* The page still switches theme for this visit if storage is unavailable. */
+    }
+  }
+
+  function selectedTheme() {
+    return safeGet(PRIMARY_KEY) === "light" ? "light" : "dark";
+  }
+
+  function updateLabel(theme) {
+    if (!button) return;
+    var label = theme === "dark" ? "Switch to light theme" : "Switch to dark theme";
     button.setAttribute("aria-label", label);
     button.setAttribute("title", label);
   }
 
-  new MutationObserver(updateLabel).observe(root, {
+  function applyTheme(theme) {
+    var normalized = theme === "light" ? "light" : "dark";
+    safeSet(PRIMARY_KEY, normalized);
+    safeSet(LEGACY_KEY, normalized);
+    safeSet(UPSTREAM_KEY, normalized);
+    root.setAttribute("data-theme", normalized);
+    updateLabel(normalized);
+  }
+
+  if (button) {
+    button.addEventListener("click", function () {
+      applyTheme(selectedTheme() === "light" ? "dark" : "light");
+    });
+  }
+
+  /*
+   * AcademicPages runs its own theme initializer after this include and removes
+   * data-theme in light mode. Keep the explicit value used by this site's CSS.
+   */
+  new MutationObserver(function () {
+    var chosen = selectedTheme();
+    if (root.getAttribute("data-theme") !== chosen) {
+      root.setAttribute("data-theme", chosen);
+    }
+    updateLabel(chosen);
+  }).observe(root, {
     attributes: true,
     attributeFilter: ["data-theme"]
   });
-  updateLabel();
+
+  window.addEventListener("storage", function (event) {
+    if (event.key === PRIMARY_KEY || event.key === LEGACY_KEY || event.key === UPSTREAM_KEY) {
+      applyTheme(event.newValue);
+    }
+  });
+
+  applyTheme(selectedTheme());
 })();
 </script>

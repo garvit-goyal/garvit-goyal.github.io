@@ -3,16 +3,54 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
 <link rel="icon" href="{{ base_path }}/images/favicon.svg" type="image/svg+xml">
+
 <script>
 (function () {
-  var saved = localStorage.getItem("theme");
-  if (saved === "light") {
-    document.documentElement.removeAttribute("data-theme");
-  } else {
-    document.documentElement.setAttribute("data-theme", "dark");
+  var PRIMARY_KEY = "garvit-theme-v2";
+  var LEGACY_KEY = "garvit-color-theme";
+  var UPSTREAM_KEY = "theme";
+
+  function safeGet(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (error) {
+      return null;
+    }
   }
+
+  function safeSet(key, value) {
+    try {
+      localStorage.setItem(key, value);
+    } catch (error) {
+      /* The page still switches theme for this visit if storage is unavailable. */
+    }
+  }
+
+  var saved = safeGet(PRIMARY_KEY);
+  if (saved !== "light" && saved !== "dark") {
+    saved = safeGet(LEGACY_KEY);
+  }
+  if (saved !== "light" && saved !== "dark") {
+    saved = safeGet(UPSTREAM_KEY);
+  }
+
+  var theme = saved === "light" ? "light" : "dark";
+
+  safeSet(PRIMARY_KEY, theme);
+  safeSet(LEGACY_KEY, theme);
+  safeSet(UPSTREAM_KEY, theme);
+  document.documentElement.setAttribute("data-theme", theme);
+
+  window.GarvitTheme = {
+    primaryKey: PRIMARY_KEY,
+    legacyKey: LEGACY_KEY,
+    upstreamKey: UPSTREAM_KEY,
+    safeGet: safeGet,
+    safeSet: safeSet
+  };
 })();
 </script>
+
 {% if jekyll.environment == "production" and site.analytics.google.tracking_id %}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google.tracking_id }}"></script>
 <script>

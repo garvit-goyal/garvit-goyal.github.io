@@ -11,7 +11,7 @@
         {% endif %}
         <a class="site-nav__link{% if page.url == link.url %} is-active{% endif %}" href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
       {% endfor %}
-      <button id="theme-toggle" class="site-theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme">
+      <button id="site-theme-toggle" class="site-theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme">
         <svg class="site-theme-toggle__icon site-theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a1 1 0 0 1-1-1V1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1Zm0 19a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1Zm8-10a1 1 0 1 1 0-2h2a1 1 0 1 1 0 2h-2ZM2 13a1 1 0 1 1 0-2h2a1 1 0 1 1 0 2H2Zm15.66-6.66a1 1 0 0 1-.7-1.71l1.41-1.42a1 1 0 1 1 1.42 1.42l-1.42 1.41a1 1 0 0 1-.71.3ZM4.93 19.07a1 1 0 0 1-.7-1.71l1.41-1.42a1 1 0 0 1 1.42 1.42l-1.42 1.41a1 1 0 0 1-.71.3Zm14.15 0a1 1 0 0 1-.71-.3l-1.41-1.41a1 1 0 0 1 1.41-1.42l1.42 1.42a1 1 0 0 1-.71 1.71ZM6.34 6.34a1 1 0 0 1-.7-.3L4.22 4.63a1 1 0 0 1 1.42-1.42l1.41 1.42a1 1 0 0 1-.71 1.71ZM12 17.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11Zm0-2a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/></svg>
         <svg class="site-theme-toggle__icon site-theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.7A8.5 8.5 0 0 1 9.3 3.5a8.75 8.75 0 1 0 11.2 11.2Z"/></svg>
       </button>
