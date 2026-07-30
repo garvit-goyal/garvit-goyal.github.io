@@ -6,8 +6,11 @@
 <script>
 (function () {
   var saved = localStorage.getItem("theme");
-  var theme = saved === "light" || saved === "dark" ? saved : "dark";
-  document.documentElement.setAttribute("data-theme", theme);
+  if (saved === "light") {
+    document.documentElement.removeAttribute("data-theme");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
 })();
 </script>
 {% if jekyll.environment == "production" and site.analytics.google.tracking_id %}
