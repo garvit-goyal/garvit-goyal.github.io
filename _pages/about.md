@@ -8,7 +8,7 @@ redirect_from:
 
 <h2 class="intro-greeting">Hi!</h2>
 
-I am a Machine Learning Researcher, currently collaborating with [Avijit Maji](https://www.civil.iitb.ac.in/~avimaji/) at [IIT Bombay](https://www.iitb.ac.in/). I joined IIT Bombay to pursue a B.Tech. in Civil Engineering, but research changed the direction of my interests early on. From my second year, I worked on computational problems in transportation, including modeling traffic, vehicle interactions, and driver behavior, and became increasingly curious about the machine learning methods behind those applications. My undergraduate research work with Avijit Maji culminated in a [thesis](/projects/#vehicle-behavior) on ML for vehicle speed and trajectory prediction.
+I am a Machine Learning Researcher, currently collaborating with [Avijit Maji](https://www.civil.iitb.ac.in/~avimaji/) at [IIT Bombay](https://www.iitb.ac.in/) on meta-learning methods. I joined IIT Bombay to pursue a B.Tech. in Civil Engineering, but research changed the direction of my interests early on. From my second year, I worked on computational problems in transportation, including modeling traffic, vehicle interactions, and driver behavior, and became increasingly curious about the machine learning methods behind those applications. My undergraduate research work with Avijit Maji culminated in a [thesis](/projects/#vehicle-behavior) on ML for vehicle speed and trajectory prediction.
 
 I later joined [Georgia Tech](https://www.gatech.edu/) for an M.S. in Computational Science and Engineering to gain a broader foundation in ML. I used the program to learn and work across several areas, including non-Euclidean representation learning, graph neural networks, federated learning, and computational simulation.
 
