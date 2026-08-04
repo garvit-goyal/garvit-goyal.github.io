@@ -1114,7 +1114,6 @@ html[data-theme="light"] .site-theme-toggle:focus-visible {
 /* Compact education rows on the homepage. */
 .education-list {
   margin: 0.9rem 0 2.4rem;
-  border-top: 1px solid var(--site-border);
 }
 
 .education-entry {
@@ -1123,7 +1122,6 @@ html[data-theme="light"] .site-theme-toggle:focus-visible {
   gap: 1rem;
   align-items: center;
   padding: 1.05rem 0;
-  border-bottom: 1px solid var(--site-border);
 }
 
 .education-logo-wrap {
