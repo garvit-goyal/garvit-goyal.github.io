@@ -16,6 +16,36 @@ I then spent several years applying computational methods in transportation plan
 
 <p class="closing-line">I am most excited about learning systems that do more than predict: systems that can help us uncover patterns and better understand what gives rise to them.</p>
 
+## Education
+
+<div class="education-list">
+  <div class="education-entry">
+    <div class="education-logo-wrap" aria-hidden="true">
+      <img class="education-logo education-logo--gt" src="/images/education/georgia-tech.png" alt="">
+    </div>
+    <div class="education-details">
+      <div class="education-heading">
+        <h3><a href="https://www.gatech.edu/">Georgia Institute of Technology</a></h3>
+        <span class="education-year">2022</span>
+      </div>
+      <p>M.S. in Computational Science and Engineering</p>
+    </div>
+  </div>
+
+  <div class="education-entry">
+    <div class="education-logo-wrap" aria-hidden="true">
+      <img class="education-logo education-logo--iitb" src="/images/education/iit-bombay.png" alt="">
+    </div>
+    <div class="education-details">
+      <div class="education-heading">
+        <h3><a href="https://www.iitb.ac.in/">Indian Institute of Technology Bombay</a></h3>
+        <span class="education-year">2020</span>
+      </div>
+      <p>B.Tech. in Civil Engineering</p>
+    </div>
+  </div>
+</div>
+
 ## Research
 
 My research interests lie in reliable and trustworthy machine learning, meta-learning and AutoML, and graph and geometric representation learning.
