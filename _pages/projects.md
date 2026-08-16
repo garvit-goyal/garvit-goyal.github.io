@@ -14,7 +14,7 @@ author_profile: true
   <div class="entry-meta">With <a href="https://www.civil.iitb.ac.in/~avimaji/" target="_blank" rel="noopener">Avijit Maji</a> · <a href="https://www.iitb.ac.in/" target="_blank" rel="noopener">IIT Bombay</a> · March 2026–present</div>
   <h3>Before You Tune: Predicting Hyperparameter Optimization Outcomes from Data Complexity</h3>
   <p>Formulated tuning gain and optimizer sensitivity as separate pre-HPO prediction problems and developed a data-complexity-based approach for studying both. Designed the optimizer benchmark, complexity analysis, statistical comparisons, robustness tests, and mixed-variable exploratory landscape analysis, and led the interpretation and manuscript preparation.</p>
-  <p class="project-links">Manuscript in preparation.</p>
+  <p class="project-links">Manuscript under review.</p>
 </div>
 
 <div class="project-entry" id="sentence-representations">
