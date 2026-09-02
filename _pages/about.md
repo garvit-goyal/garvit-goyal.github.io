@@ -8,7 +8,7 @@ redirect_from:
 
 <h2 class="intro-greeting">Hi!</h2>
 
-I am a Machine Learning Researcher interested in reliable ML, mechanistic interpretability, and optimization. I’ve been fortunate to work with several amazing collaborators, including [Chenyu You](https://chenyuyou.me/) and [Yifan Wang](https://yfwang.me/) at Stony Brook University; [Yaoqing Yang](https://sites.google.com/site/yangyaoqingcmu/) and [Ruochen Jin](https://sites.google.com/site/yangyaoqingcmu/group) at Dartmouth College; and, earlier, [Avijit Maji](https://www.civil.iitb.ac.in/~avimaji/) at IIT Bombay.
+I am a Machine Learning researcher interested in reliable ML, mechanistic interpretability, and optimization. I’ve been fortunate to work with several amazing collaborators, including [Chenyu You](https://chenyuyou.me/) and [Yifan Wang](https://yfwang.me/) at Stony Brook University; [Yaoqing Yang](https://sites.google.com/site/yangyaoqingcmu/) and [Ruochen Jin](https://sites.google.com/site/yangyaoqingcmu/group) at Dartmouth College; and, earlier, [Avijit Maji](https://www.civil.iitb.ac.in/~avimaji/) at IIT Bombay.
 
 I joined IIT Bombay to pursue a B.Tech. in Civil Engineering, but research changed the direction of my interests early on. From my second year, I worked on computational problems in transportation, including modeling traffic, vehicle interactions, and driver behavior, and became increasingly curious about the machine learning methods behind those applications. My undergraduate research work with Avijit Maji culminated in a [thesis](/projects/#vehicle-behavior) on ML for vehicle speed and trajectory prediction.
 
