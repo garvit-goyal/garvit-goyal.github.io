@@ -2,13 +2,15 @@ locale: "en-US"
 title: "Garvit Goyal"
 title_separator: "-"
 name: &name "Garvit Goyal"
-description: &description "Machine learning researcher working on reliable ML, AutoML, and representation learning."
-og_image: "/images/profile.jpg"
+description: &description "Machine learning researcher working on reliable ML, mechanistic interpretability, and optimization."
+
 url: "https://garvit-goyal.github.io"
 baseurl: ""
 repository: "garvit-goyal/garvit-goyal.github.io"
 remote_theme: "academicpages/academicpages.github.io@master"
-og_image: "/images/profile.jpg"
+
+og_image: "social-preview.png"
+og_description: "Machine learning researcher working on reliable ML, mechanistic interpretability, and optimization."
 
 author:
   avatar: "profile.jpg"
